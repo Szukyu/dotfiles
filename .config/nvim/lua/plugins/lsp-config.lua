@@ -42,7 +42,8 @@ return {
   config = function (_, opts)
     vim.api.nvim_create_autocmd("LspAttach", {
       callback = function(ev)
-        vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { buffer = ev.buf })
+        local buf = { buffer = ev.buf, desc = "Rename Variable" }
+        vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, buf)
       end
     })
 

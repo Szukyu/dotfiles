@@ -1,23 +1,38 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
-    "echasnovski/mini.icons",
   },
   config = function()
     local lualine = require("lualine")
-    local lazy_status = require("lazy.status")
     lualine.setup({
       options = {
         icons_enabled = true,
       },
       sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "branch" },
+        lualine_c = {
+          { "diagnostics", icons_enabled = true, colored = true },
+        },
         lualine_x = {
           {
-            lazy_status.updates,
-            cond = lazy_status.has_updates,
+            require("lazy.status").updates,
+            cond = require("lazy.status").has_updates,
+            color = function() return { fg = Snacks.util.color("Special") } end,
           },
-          { "encoding" },
-          { "filetype" },
+          {
+            "diff",
+            source = function()
+              local gitsigns = vim.b.gitsigns_status_dict
+              if gitsigns then
+                return {
+                  added = gitsigns.added,
+                  modified = gitsigns.changed,
+                  removed = gitsigns.removed,
+                }
+              end
+            end,
+          },
         },
       },
     })
