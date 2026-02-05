@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     lazy = true,
     opts = {
       file = {
@@ -19,7 +19,7 @@ return {
     end,
   },
   {
-    "echasnovski/mini.pairs",
+    "nvim-mini/mini.pairs",
     event = "VeryLazy",
     opts = {
       modes = { insert = true, command = true, terminal = false },
