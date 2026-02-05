@@ -60,6 +60,7 @@ alias cp="cp -riv"
 alias vim="nvim"
 alias ls="eza --color --long --group-directories-first"
 alias ll="eza --color --all --long --group-directories-first"
+alias tree="eza --tree --level=3"
 
 # Shell Integrations
 eval "$(fzf --zsh)"
