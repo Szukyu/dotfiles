@@ -62,5 +62,11 @@ map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
 
+-- Move Windows
+map("n", "<leader>h", "<C-W>h", { desc = "Move to Right Window", remap = true })
+map("n", "<leader>l", "<C-W>l", { desc = "Move to Left Window", remap = true })
+map("n", "<leader>j", "<C-W>j", { desc = "Move to Down Window", remap = true })
+map("n", "<leader>h", "<C-W>h", { desc = "Move to Up Window", remap = true })
+
 -- Quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
