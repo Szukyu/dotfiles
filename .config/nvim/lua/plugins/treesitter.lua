@@ -5,6 +5,8 @@ return {
   cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
   config = function()
     require("nvim-treesitter.configs").setup({
+      highlight = { enable = true },
+      indent = { enable = true },
       ensure_installed = {
         "bash",
         "c",
@@ -24,9 +26,6 @@ return {
         "typescript",
         "vim",
       },
-      ignore_install = {},
-      sync_install = false,
-      auto_install = true,
       incremental_selection = {
         enable = true,
         keymaps = {
