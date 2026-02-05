@@ -40,28 +40,12 @@ return {
       },
       layouts = {
         default = {
-          reverse = true,
           layout = {
-            box = "horizontal",
-            backdrop = false,
             width = 0.9,
             height = 0.9,
-            border = "none",
-            {
-              box = "vertical",
-              { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
-              { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
-            },
-            {
-              win = "preview",
-              title = "{preview:Preview}",
-              width = 0.45,
-              border = "rounded",
-              title_pos = "center",
-            },
-          },
-        },
-      },
+          }
+        }
+      }
     },
     notifier = {
       enabled = true,
