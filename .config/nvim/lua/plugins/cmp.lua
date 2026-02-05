@@ -45,7 +45,7 @@ return {
       },
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' }
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
     completion = {
       trigger = {
@@ -68,32 +68,59 @@ return {
           padding = 1,
           columns = { { "kind_icon", gap = 1}, { "label", "label_description", "kind", gap = 2 } },
           components = {
-            label = {
-              text = function(item)
-                return item.label
+            kind_icon = {
+              ellipsis = false,
+              text = function(ctx) return ctx.kind_icon .. ctx.icon_gap end,
+              highlight = function(ctx)
+                return require('blink.cmp.completion.windows.render.tailwind').get_hl(ctx) or ('BlinkCmpKind' .. ctx.kind)
               end,
-              highlight = "CmpItemAbbr",
             },
+
             kind = {
-              text = function(item)
-                return item.kind
+              ellipsis = false,
+              width = { fill = true },
+              text = function(ctx) return ctx.kind end,
+              highlight = function(ctx)
+                return require('blink.cmp.completion.windows.render.tailwind').get_hl(ctx) or ('BlinkCmpKind' .. ctx.kind)
               end,
-              highlight = "CmpItemKind",
             },
-          }
+
+            label = {
+              width = { fill = true, max = 60 },
+              text = function(ctx) return ctx.label .. ctx.label_detail end,
+              highlight = function(ctx)
+                local highlights = {
+                  { 0, #ctx.label, group = ctx.deprecated and 'BlinkCmpLabelDeprecated' or 'BlinkCmpLabel' },
+                }
+                if ctx.label_detail then
+                  table.insert(highlights, { #ctx.label, #ctx.label + #ctx.label_detail, group = 'BlinkCmpLabelDetail' })
+                end
+
+                for _, idx in ipairs(ctx.label_matched_indices) do
+                  table.insert(highlights, { idx, idx + 1, group = 'BlinkCmpLabelMatch' })
+                end
+
+                return highlights
+              end,
+            },
+
+            label_description = {
+              width = { max = 30 },
+              text = function(ctx) return ctx.label_description end,
+              highlight = 'BlinkCmpLabelDescription',
+            }
+          },
         },
       },
       documentation = {
         auto_show = true,
         auto_show_delay_ms = 250,
-        treesitter_highlighting = true,
+        treesitter_highlighting = false,
         window = {
           border = "rounded",
           scrollbar = false,
         }
       },
-    }
-  }
+    },
+  },
 }
-
-

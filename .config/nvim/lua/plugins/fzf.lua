@@ -13,12 +13,15 @@ return {
           scrollbar = false,
         },
       },
+      defaults = {
+        no_header = true,
+      },
       fzf_opts = {
         ["--no-scrollbar"] = true,
       },
       fzf_colors = {
-        ["bg+"] = "#04050B",
         ["gutter"] = "-1",
+        ["bg+"] = "#170B3B"
       }
     })
 

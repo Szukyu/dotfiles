@@ -3,9 +3,6 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
-    animate = {
-      enable = true,
-    },
     bigfile = { enabled = true },
     dashboard = {
       row = nil,
@@ -32,13 +29,11 @@ return {
     input = {
       enable = true,
     },
-    scroll = { enable = true },
-    indent = { enable = false },
+    indent = { enabled = true },
   },
   keys = {
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
     { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
-    { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
     { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
     { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse" },
     { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },

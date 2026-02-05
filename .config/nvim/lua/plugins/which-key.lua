@@ -1,10 +1,10 @@
 return {
   "folke/which-key.nvim",
-  event = "VeryLazy",
-  init = function()
-    vim.o.timeout = true
-    vim.o.timeoutlen = 500
-  end,
+  enabled = true,
   opts = {
-  },
+    preset = "modern",
+    debug = vim.uv.cwd():find("which%-key"),
+    win = {},
+    spec = {}
+  }
 }

@@ -7,7 +7,6 @@ return {
       sync_install = true,
       highlight = {
         enable = true,
-        use_languagetree = true,
       },
       indent = { enable = true },
       ensure_installed = {
@@ -21,6 +20,7 @@ return {
         "gitcommit",
         "gitignore",
         "cpp",
+        "markdown",
       },
     })
   end
