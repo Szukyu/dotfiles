@@ -20,7 +20,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   defaults = {
-    lazy = false,
+    lazy = true,
     version = false,
     keymaps = false,
     autocmds = false,
@@ -32,7 +32,7 @@ require("lazy").setup({
     },
     border = "rounded",
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "tokyonight" } },
   checker = {
     enabled = true,
     notify = false,

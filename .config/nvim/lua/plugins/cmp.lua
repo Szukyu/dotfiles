@@ -38,6 +38,7 @@ return {
         },
       },
       menu = {
+        scrollbar = false,
         border = "rounded",
         draw = {
           treesitter = { "lsp" },
