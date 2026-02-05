@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPost", "BufWritePost", "BufNewFile", "VeryLazy" },
   config = function()
     local config = require("nvim-treesitter.configs")
     config.setup({

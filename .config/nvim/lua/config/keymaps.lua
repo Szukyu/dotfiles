@@ -17,12 +17,8 @@ map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 map("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
 map("n", "<leader>gl", function() Snacks.lazygit.log() end, { desc = "Lazygit Log" })
 
--- Git
-map("n", "<leader>gc", function() Snacks.picker.git_log() end, { desc = "Git Log" })
-map("n", "<leader>gs", function() Snacks.picker.git_status() end, { desc = "Git Status" })
-
 -- Picker Quick Commands
-map("n", "<leader>,", function () Snacks.picker.buffer() end, { desc = "Buffers" })
+map("n", "<leader>,", function () Snacks.picker.buffers() end, { desc = "Buffers" })
 map("n", "<leader>/", function() Snacks.picker.grep() end, { desc = "Grep" })
 map("n", "<leader>:", function() Snacks.picker.command_history() end, { desc = "Command History" })
 map("n", "<leader><space>", function() Snacks.picker.files() end, { desc = "Find Files" })
