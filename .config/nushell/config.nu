@@ -757,7 +757,6 @@ $env.config = {
 }
 
 # Alias
-alias z = __zoxide_z
 alias l = ls -all
 alias ll = ls -l
 alias mv = mv -iv
@@ -767,4 +766,3 @@ alias cp = cp -riv
 source ~/.config/nushell/env.nu
 source ~/.zoxide.nu
 use ~/.cache/starship/init.nu
-

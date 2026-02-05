@@ -62,4 +62,4 @@ path add /opt/homebrew/bin
 
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
-zoxide init nushell | save -f ~/.zoxide.nu
+zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
