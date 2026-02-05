@@ -1,10 +1,16 @@
 return {
   "folke/which-key.nvim",
-  enabled = true,
+  event = "VeryLazy",
+  opts_extend = { "spec " },
   opts = {
     preset = "modern",
-    debug = vim.uv.cwd():find("which%-key"),
-    win = {},
-    spec = {}
+    defaults = {},
+    spec = {
+      {
+        mode = { "n", "v" },
+        { "<leader>g", group = "git"},
+        { "<leader>u", group = "ui", icon = { icon = "󰙵 ", color = "cyan" } },
+      }
+    }
   }
 }
