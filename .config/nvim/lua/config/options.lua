@@ -47,7 +47,7 @@ opt.smartcase = true
 opt.smartindent = true
 opt.spelllang = { "en" }
 opt.splitkeep = "screen"
-opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
+-- opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 opt.tabstop = 2
 opt.termguicolors = true
 opt.timeoutlen = 300
@@ -58,7 +58,3 @@ opt.virtualedit = "block"
 opt.wildmode = "longest:full,full"
 opt.winminwidth = 5
 opt.wrap = false
-
--- Snacks Picker
-vim.g.lazyvim_picker = "snacks"
-vim.g.autoformat = false

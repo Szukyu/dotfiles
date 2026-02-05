@@ -16,26 +16,23 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "plugins" },
+		{ import = "plugins" },
+	},
+	install = { colorscheme = { "tokyonight" } },
+	checker = {
+    enabled = true, 
+    notify = false
   },
   defaults = {
     lazy = true,
     version = false,
-    keymaps = false,
-    autocmds = false,
   },
   ui = {
     size = {
-      width = 0.85,
+      width = 0.8,
       height = 0.8,
     },
-    border = "rounded",
-  },
-  install = { colorscheme = { "tokyonight" } },
-  checker = {
-    enabled = true,
-    notify = false,
+    border = "rounded"
   },
   performance = {
     rtp = {
@@ -48,7 +45,7 @@ require("lazy").setup({
         "tohtml",
         "tutor",
         "zipPlugin",
-      },
-    },
-  },
+      }
+    }
+  }
 })
