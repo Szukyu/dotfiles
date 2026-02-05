@@ -23,7 +23,7 @@ return {
     },
     picker = {
       enabled = true,
-      layout = "telescope",
+      layout = "telescope"
     },
     notifier = {
       enabled = true,
