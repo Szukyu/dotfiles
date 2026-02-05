@@ -10,18 +10,10 @@ map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = tru
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- Lazygit
-map("n", "<leader>gg", function()
-	Snacks.lazygit()
-end, { desc = "Lazygit" })
-map("n", "<leader>gf", function()
-	Snacks.lazygit.log_file()
-end, { desc = "Lazygit Current File History" })
-map("n", "<leader>gl", function()
-	Snacks.lazygit.log()
-end, { desc = "Lazygit Log" })
-map("n", "<leader>gL", function()
-	Snacks.lazygit.log()
-end, { desc = "Lazygit Log (cwd)" })
+map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
+map("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
+map("n", "<leader>gl", function() Snacks.lazygit.log() end, { desc = "Lazygit Log" })
+map("n", "<leader>gL", function() Snacks.lazygit.log() end, { desc = "Lazygit Log (cwd)" })
 
 -- Windows
 map("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
