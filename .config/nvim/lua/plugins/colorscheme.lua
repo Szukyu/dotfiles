@@ -3,7 +3,7 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
-    style = "night",
+    style = "moon",
     lualine_bold = true,
     on_colors = function(colors)
       colors.bg = "#080A18"
