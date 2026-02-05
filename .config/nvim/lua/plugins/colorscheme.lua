@@ -5,7 +5,7 @@ return {
   opts = {
     style = "moon",
     lualine_bold = true,
-    -- transparent = true,
+    transparent = true,
     on_colors = function(colors)
       colors.bg = "#000000" --"#080A18"
       colors.bg_float = "#04050B"
