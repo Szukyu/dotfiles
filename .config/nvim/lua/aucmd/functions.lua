@@ -1,3 +1,17 @@
+local short_indent = {
+  ["css"] = true,
+  ["cpp"] = true,
+  ["javascript"] = true,
+  ["javascriptreact"] = true,
+  ["json"] = true,
+  ["lua"] = true,
+  ["markdown"] = true,
+  ["org"] = true,
+  ["tex"] = true,
+  ["text"] = true,
+  ["yaml"] = true,
+}
+
 local nonstandard_tw = {
   ["c"] = 120,
   ["cpp"] = 120,
@@ -15,6 +29,12 @@ local nonstandard_tw = {
 }
 
 local M = {
+  set_indent = function(ft)
+    local indent = short_indent[ft] and 2 or 4
+    vim.api.nvim_set_option_value("tabstop", indent, {})
+    vim.api.nvim_set_option_value("shiftwidth", 0, {})
+  end,
+
   set_textwidth = function(ft)
     local tw = nonstandard_tw[ft] or 80
     tw = tools.nonprog_modes[ft] and 0 or tw

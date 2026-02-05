@@ -17,7 +17,7 @@ vim.opt.runtimepath:prepend(lazy_path)
 require("globals")
 require("options")
 require("maps")
--- require("aucmd")
+require("aucmd")
 
 require("lazy").setup("plugins", {
   change_detection = { enabled = true, notify = false },
