@@ -381,8 +381,4 @@ function M.scrollbar2()
   return hl_str("DiagnosticInfo", " " .. sbar .. "  ")
 end
 
-function M.lsp_progress()
-  return " " .. require("lsp-progress").progress() .. " "
-end
-
 return M

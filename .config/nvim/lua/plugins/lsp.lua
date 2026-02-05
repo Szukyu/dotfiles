@@ -4,24 +4,6 @@ return {
   dependencies = {
     "mason.nvim",
     "saghen/blink.cmp",
-    {
-      "linrongbin16/lsp-progress.nvim",
-      opts = {
-        max_size = 50,
-        spinner = { "", "󰪞", "󰪟", "󰪠", "󰪢", "󰪣", "󰪤", "󰪥" },
-        client_format = function(_, spinner, series_messages)
-          return #series_messages > 0
-          and (spinner .. " LSP")
-          or nil
-        end,
-        format = function(client_messages)
-          if #client_messages > 0 then
-            return table.concat(client_messages, " ")
-          end
-          return ""
-        end,
-      },
-    },
   },
   config = function()
     local x = vim.diagnostic.severity
