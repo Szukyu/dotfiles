@@ -47,7 +47,6 @@ map("n", "<leader>sM", function() Snacks.picker.man() end, { desc = "Man Pages" 
 map("n", "<leader>sm", function() Snacks.picker.marks() end, { desc = "Marks" })
 map("n", "<leader>sR", function() Snacks.picker.resume() end, { desc = "Resume" })
 map("n", "<leader>sq", function() Snacks.picker.qflist() end, { desc = "Quickfix List" })
-map("n", "<leader>qp", function() Snacks.picker.projects() end, { desc = "Projects" })
 
 -- Explorer
 map("n", "<leader>e", function () Snacks.picker.explorer() end, { desc = "Explorer" })
