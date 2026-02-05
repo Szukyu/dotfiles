@@ -6,6 +6,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 # HomeBrew
+```
 tap "homebrew/bundle"
 # Modern, maintained replacement for ls
 brew "eza"
@@ -42,3 +43,4 @@ cask "karabiner-elements"
 cask "raycast"
 # Gecko based web browser
 cask "zen-browser"
+```
