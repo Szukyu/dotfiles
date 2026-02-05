@@ -54,7 +54,7 @@ return {
         capabilities = vim.deepcopy(capabilities),
       }, opts.settings[server] or {})
 
-      require("lspconfig")[server].setup(server_opts)
+      vim.lsp.config(server, server_opts)
     end
 
     local servers_lists = require("config.lsp.server")
