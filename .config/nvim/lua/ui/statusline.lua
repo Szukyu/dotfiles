@@ -30,7 +30,7 @@ local ORDER = {
   "ro",
   "sep",
   "fileinfo",
-  "filetype",
+  -- "filetype",
   "scrollbar",
   "diag",
 }
