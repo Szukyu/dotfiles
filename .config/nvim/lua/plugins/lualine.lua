@@ -39,7 +39,7 @@ return {
           },
         },
       },
-      extensions = { 'oil', 'lazy', 'fzf' },
+      extensions = { 'oil', 'lazy' },
     })
   end,
 }

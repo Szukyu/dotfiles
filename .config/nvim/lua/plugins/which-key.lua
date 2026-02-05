@@ -10,6 +10,7 @@ return {
         mode = { "n", "v" },
         { "<leader>e", icon = { icon = "󰙅 ", color = "orange" } },
         { "<leader>/", icon = { icon = "󱡠 " } },
+        { "<leader>:", icon = { icon = "󱡠 " } },
         { "<leader>c", group = "code" },
         { "<leader>f", group = "file/find" },
         { "<leader>g", group = "git" },

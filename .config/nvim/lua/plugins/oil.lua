@@ -15,12 +15,9 @@ return {
         show_hidden = true,
         natural_order = true,
         is_always_hidden = function (name, _)
-          return name == ".git" or name == ".DS_Store" or name == ".localized"
+          return name == ".git" or name == ".DS_Store" or name == ".localized" or name == ".gitignore"
         end
       }
     }
-
-    local keymap = vim.keymap
-    keymap.set("n", "<leader>e", require("oil").toggle_float, { desc = "Open Oil"})
   end
 }

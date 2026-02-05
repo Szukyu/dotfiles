@@ -8,6 +8,7 @@ return {
       highlight = {
         enable = true,
       },
+      textobjects = { enable = false },
       indent = { enable = true },
       ensure_installed = {
         "json",
