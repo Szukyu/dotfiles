@@ -59,10 +59,6 @@ opt.wildmode = "longest:full,full"
 opt.winminwidth = 5
 opt.wrap = false
 
--- Keymaps Silent By Default
-local keymap_set = vim.keymap.set
-vim.keymap.set = function(mode, lhs, rhs, opts)
-  opts = opts or {}
-  opts.silent = opts.silent ~= false
-  return keymap_set(mode, lhs, rhs, opts)
-end
+-- Snacks Picker
+vim.g.lazyvim_picker = "snacks"
+vim.g.autoformat = false

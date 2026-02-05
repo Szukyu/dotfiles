@@ -15,20 +15,20 @@ return {
     on_highlights = function(highlights, _)
       highlights.BlinkCmpMenuBorder = {
         bg = "#080A18",
-        fg = "#27A1b9"
+        fg = "#27A1b9",
       }
       highlights.BlinkCmpDoc = {
         bg = "#04050B",
-        fg = "#c0caf5"
+        fg = "#c0caf5",
       }
       highlights.BlinkCmpDocBorder = {
         bg = "#080A18",
-        fg = "#27A1b9"
+        fg = "#27A1b9",
       }
-    end
+    end,
   },
   config = function(_, opts)
     require("tokyonight").setup(opts)
     vim.cmd.colorscheme("tokyonight")
-  end
+  end,
 }

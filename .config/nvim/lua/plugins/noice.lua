@@ -1,38 +1,49 @@
 return {
   "folke/noice.nvim",
-  event = "VeryLazy",
-  opts = {
-    lsp = {
-      override = {
-        ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-        ["vim.lsp.util.stylize_markdown"] = true,
-        ["cmp.entry.get_documentation"] = true,
+  opts = function(_, opts)
+    opts.debug = false
+    opts.routes = opts.routes or {}
+    table.insert(opts.routes, {
+      filter = {
+        event = "notify",
+        find = "No information available",
       },
-      signature = {
-        enabled = false,
-      }
-    },
-    routes = {
-      {
-        filter = {
-          event = "msg_show",
-          any = {
-            { find = "%d+L, %d+B" },
-            { find = "; after #%d+" },
-            { find = "; before #%d+" },
-          },
+      opts = { skip = true },
+    })
+    local focused = true
+    vim.api.nvim_create_autocmd("FocusGained", {
+      callback = function()
+        focused = true
+      end,
+    })
+    vim.api.nvim_create_autocmd("FocusLost", {
+      callback = function()
+        focused = false
+      end,
+    })
+
+    table.insert(opts.routes, 1, {
+      filter = {
+        ["not"] = {
+          event = "lsp",
+          kind = "progress",
         },
-        view = "mini",
+        cond = function()
+          return not focused and false
+        end,
       },
-    },
-    presets = {
-      long_message_to_split = true,
-    },
-  },
-  config = function(_, opts)
-    if vim.o.filetype == "lazy" then
-      vim.cmd([[messages clear]])
-    end
-    require("noice").setup(opts)
+      view = "notify_send",
+      opts = { stop = false, replace = true },
+    })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "markdown",
+      callback = function(event)
+        vim.schedule(function()
+          require("noice.text.markdown").keys(event.buf)
+        end)
+      end,
+    })
+    return opts
   end,
 }
