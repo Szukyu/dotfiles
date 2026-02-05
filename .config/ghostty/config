@@ -16,29 +16,25 @@ palette = 13=#caabff
 palette = 14=#b2ebff
 palette = 15=#c8d3f5
 
+font-size = 14
+font-feature = -liga
+
 background = #080A18
 foreground = #c0caf5
-cursor-color = #c0caf5
 selection-background = #283457
 selection-foreground = #c0caf5
-# custom-shader = shader.glsl
 
+# Cursor
 cursor-invert-fg-bg = true
-window-theme = ghostty
-background-opacity = 1
-adjust-underline-position = 4
+cursor-style = block
+cursor-color = #c0caf5
 
-# Mouse
 mouse-hide-while-typing = true
+macos-titlebar-style = tabs
 
-# Window
-window-padding-y = 2,0
+window-padding-y = 11
 window-padding-balance = true
-window-decoration = false
-macos-titlebar-style = hidden
-macos-non-native-fullscreen = true
-
-confirm-close-surface = false
+window-colorspace = display-p3
 
 # Keybindings
 keybind = ctrl+h=goto_split:left
@@ -49,6 +45,6 @@ keybind = super+shift+enter=new_split:auto
 keybind = super+shift+r=reload_config
 
 # Other
-copy-on-select = clipboard
-shell-integration-features = cursor,sudo,no-title
-shell-integration = none
+clipboard-read = allow
+clipboard-write = allow
+shell-integration = zsh
