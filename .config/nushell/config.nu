@@ -148,13 +148,13 @@ $env.config = {
   bracketed_paste: true
   edit_mode: vi 
   shell_integration: {
-    osc2: false
-    osc7: false
-    osc8: false
+    osc2: true
+    osc7: true
+    osc8: true
     osc9_9: false
     osc133: false
-    osc633: false
-    reset_application_mode: false
+    osc633: true
+    reset_application_mode: true
   }
   render_right_prompt_on_last_line: false
   use_kitty_protocol: false

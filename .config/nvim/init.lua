@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
-require("lazy").setup({ { import = "plugins" }}, {
+require("lazy").setup({ import = "plugins" }, {
   checker = {
     enabled = true,
     notify = false,
@@ -20,4 +20,11 @@ require("lazy").setup({ { import = "plugins" }}, {
   change_detection = {
     notify = false,
   },
+  ui = {
+    size = {
+      width = 0.8,
+      height = 0.8
+    },
+    border = 'rounded',
+  }
 })

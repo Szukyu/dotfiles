@@ -5,8 +5,19 @@ return {
   },
   config = function()
     require("fzf-lua").setup({
-      "telescope",
+      winopts = {
+        height = 0.85,
+        width = 0.95,
+        preview = {
+          horizontal = "right:45%",
+          scrollbar = false,
+        },
+      },
+      fzf_opts = {
+        ["--no-scrollbar"] = true,
+      },
       fzf_colors = {
+        ["bg+"] = "#04050B",
         ["gutter"] = "-1",
       }
     })
