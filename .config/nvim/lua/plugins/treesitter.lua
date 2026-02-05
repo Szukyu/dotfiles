@@ -29,7 +29,7 @@ return {
 
     }
   },
-  config = function()
+  config = function(_, opts)
     local TS= require("nvim-treesitter")
     TS.setup(opts)
   end,

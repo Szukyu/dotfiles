@@ -26,7 +26,13 @@ return {
         explorer = {
           auto_close = true,
           hidden = true,
-        }
+        },
+        files = {
+          hidden = true,
+        },
+        grep = {
+          hidden = true,
+        },
       },
       layouts = {
         default = {

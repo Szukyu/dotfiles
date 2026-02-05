@@ -5,7 +5,7 @@ local opt = vim.opt
 
 opt.autowrite = true
 opt.clipboard = "unnamedplus"
-opt.completeopt = "menu,menuone,noselect"
+-- opt.completeopt = "menu, menuone, noselect"
 opt.cursorline = true
 opt.cursorlineopt = "number"
 opt.conceallevel = 2
