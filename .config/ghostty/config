@@ -32,7 +32,7 @@ cursor-color = #c0caf5
 mouse-hide-while-typing = true
 macos-titlebar-style = tabs
 
-window-padding-y = 11
+# window-padding-y = 11
 window-padding-balance = true
 window-colorspace = display-p3
 
