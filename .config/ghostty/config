@@ -21,6 +21,7 @@ foreground = #c0caf5
 cursor-color = #c0caf5
 selection-background = #283457
 selection-foreground = #c0caf5
+# custom-shader = shader.glsl
 
 cursor-invert-fg-bg = true
 window-theme = ghostty

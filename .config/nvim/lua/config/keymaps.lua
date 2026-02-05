@@ -24,7 +24,6 @@ map("n", "<leader><space>", function() Snacks.picker.files() end, { desc = "Find
 map("n", "<leader>fb", function() Snacks.picker.buffers() end, { desc = "Buffers" })
 map("n", "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, { desc = "Find Config File" })
 map("n", "<leader>ff", function() Snacks.picker.files() end, { desc = "Find Files" })
-map("n", "<leader>fg", function() Snacks.picker.git_files() end, { desc = "Find Git Files" })
 map("n", "<leader>fr", function() Snacks.picker.recent() end, { desc = "Recent" })
 
 -- Grep
@@ -46,7 +45,6 @@ map("n", "<leader>sl", function() Snacks.picker.loclist() end, { desc = "Locatio
 map("n", "<leader>sM", function() Snacks.picker.man() end, { desc = "Man Pages" })
 map("n", "<leader>sm", function() Snacks.picker.marks() end, { desc = "Marks" })
 map("n", "<leader>sR", function() Snacks.picker.resume() end, { desc = "Resume" })
-map("n", "<leader>sq", function() Snacks.picker.qflist() end, { desc = "Quickfix List" })
 
 -- Explorer
 map("n", "<leader>e", function () Snacks.picker.explorer() end, { desc = "Explorer" })
