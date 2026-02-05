@@ -14,3 +14,9 @@ map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 map("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
 map("n", "<leader>gl", function() Snacks.lazygit.log() end, { desc = "Lazygit Log" })
 map("n", "<leader>gL", function() Snacks.lazygit.log() end, { desc = "Lazygit Log (cwd)" })
+
+-- Windows
+map("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
+map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
+map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
+map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
