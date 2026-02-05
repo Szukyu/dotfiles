@@ -64,6 +64,8 @@ local function path_widget(root, fname)
   icon, hl = mini_icons.get("file", file_name)
 
   if fname == "" then file_name = "[No Name]" end
+  if fname == "lazy" then icon = "󰒲 " end
+
   path = " " .. tools.hl_str(hl, icon) .. " " .. file_name
 
   if bo.buftype == "help" then return path end

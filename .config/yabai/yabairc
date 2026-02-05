@@ -1,17 +1,58 @@
-yabai -m config layout stack
+# General
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+yabai -m config auto_balance on
 
-yabai -m config top_padding 12
-yabai -m config bottom_padding 12
-yabai -m config left_padding 12
-yabai -m config right_padding 12
-yabai -m config window_gap 12
+yabai -m config focus_follows_mouse autoraise
 
+yabai -m config split_child on
+
+# Mouse Behavior
+yabai -m config mouse_follows_focus on
 yabai -m config mouse_modifier cmd
 yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
+yabai -m config focus_follows_mouse autoraise
 
-yabai -m rule --add app="^(Calculator|Software Update|Finder|System Preferences|System Settings|Riot Client|League of Legends)$" manage=off
-yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
+# Disable macOS window animation
+yabai -m config window_animation_duration 0.0
+
+# Spaces
+yabai -m config display_arrangement horizontal
+yabai -m config focus_follows_mouse autoraise
+
+# Padding
+yabai -m config top_padding 8
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 10
+
+# Floating Rules
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Disk Utility$" manage=off
+yabai -m rule --add app="^Media$" manage=off
+yabai -m rule --add app="^Photos$" manage=off
+yabai -m rule --add app="^Riot Client" manage=off
+yabai -m rule --add app="^League of Legends$" manage=off
+
+yabai -m rule --add title="Preferences" manage=off
+yabai -m rule --add title="Settings" manage=off
+yabai -m rule --add title="About This Mac" manage=off
+
+yabai -m config window_topmost on
+
+# Re-balance space after window destroy
+yabai -m signal --add event=window_destroyed action="yabai -m space --balance"
+
+# Re-balance space after window created
+yabai -m signal --add event=window_created action="yabai -m space --balance"
+
+# Auto-focus newest window
+yabai -m signal --add event=window_created action="yabai -m window --focus"
 
 yabai -m rule --apply
