@@ -38,7 +38,7 @@ return {
         "stylua",
         "isort",
         "black",
-        "pylint",
+        "ruff",
         "eslint_d",
       }
     })

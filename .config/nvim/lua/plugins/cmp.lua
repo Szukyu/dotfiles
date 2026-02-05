@@ -52,18 +52,16 @@ return {
         min_width = 15,
         max_height = 10,
         border = "rounded",
-        winhighlight = "Normal:BlinkCmpMenu",
         scrollbar = false,
         draw = {
           padding = 1,
           columns = { { "kind_icon", gap = 1}, { "label", "label_description", "kind", gap = 2 } },
-        }
+        },
       },
       documentation = {
         auto_show = true,
         window = {
           border = "rounded",
-          winhightlight = "Normal:BlinkCmpMenu",
           scrollbar = true,
         }
       },
