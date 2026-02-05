@@ -1,6 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
+    "echasnovski/mini.icons",
   },
   config = function()
     local lualine = require("lualine")
@@ -13,6 +14,8 @@ return {
         lualine_b = { "branch" },
         lualine_c = {
           { "diagnostics", icons_enabled = true, colored = true },
+          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0} },
+          { "filename", path = 1}
         },
         lualine_x = {
           {
