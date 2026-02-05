@@ -5,6 +5,7 @@ return {
   opts = {
     style = "moon",
     lualine_bold = true,
+    -- transparent = true,
     on_colors = function(colors)
       colors.bg = "#080A18"
       colors.bg_float = "#04050B"
@@ -17,7 +18,7 @@ return {
         bg = "#080A18",
         fg = "#27A1b9",
       }
-     highlights.BlinkCmpDoc = {
+      highlights.BlinkCmpDoc = {
         bg = "#04050B",
         fg = "#c0caf5",
       }
