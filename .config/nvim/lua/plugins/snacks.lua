@@ -52,7 +52,6 @@ return {
       timeout = 3000,
     },
     quickfile = { enabled = true },
-    statuscolumn = { enabled = false },
     words = { enabled = true },
     input = { enabled = true },
     indent = { enabled = true },

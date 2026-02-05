@@ -23,6 +23,7 @@ return {
         "gitignore",
         "cpp",
         "markdown",
+        "c",
       },
     })
   end

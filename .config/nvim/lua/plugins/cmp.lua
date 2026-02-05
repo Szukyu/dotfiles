@@ -122,5 +122,12 @@ return {
         }
       },
     },
+    signature = {
+      enabled = true,
+      window = {
+        border = "rounded",
+        direction_priority = { 's', 'n' },
+      },
+    }
   },
 }
