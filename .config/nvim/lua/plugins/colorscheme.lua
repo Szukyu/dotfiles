@@ -19,7 +19,7 @@ return {
           fg = "#27A1b9"
         }
         highlights.BlinkCmpDoc = {
-          bg = "#080A18",
+          bg = "#04050B",
           fg = "#c0caf5"
         }
         highlights.BlinkCmpDocBorder = {

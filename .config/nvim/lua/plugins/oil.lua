@@ -8,6 +8,9 @@ return {
   opts = {},
   config = function ()
     require("oil").setup {
+      keymaps = {
+        ["q"] = { "actions.close", mode = "n" },
+      },
       view_options = {
         show_hidden = true,
         natural_order = true,
@@ -18,6 +21,6 @@ return {
     }
 
     local keymap = vim.keymap
-    keymap.set("n", "<leader>e", require("oil").toggle_float)
+    keymap.set("n", "<leader>e", require("oil").toggle_float, { desc = "Open Oil"})
   end
 }
