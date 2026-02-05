@@ -7,4 +7,5 @@ return {
   { "folke/todo-comments.nvim", enabled = false },
   { "catppuccin", enabled = false },
   { "folke/trouble.nvim", enabled = false },
+  { "folke/flash.nvim", enabled = false },
 }
