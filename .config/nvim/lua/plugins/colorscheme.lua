@@ -17,7 +17,7 @@ return {
         bg = "#080A18",
         fg = "#27A1b9",
       }
-      highlights.BlinkCmpDoc = {
+     highlights.BlinkCmpDoc = {
         bg = "#04050B",
         fg = "#c0caf5",
       }
