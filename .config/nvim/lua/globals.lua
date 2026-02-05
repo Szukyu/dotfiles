@@ -7,12 +7,10 @@ _G.tools = {
       ok = "✔",
       d_chev = "∨",
       ellipses = "…",
-      node = "╼",
       document = "≡",
       lock = "",
       r_chev = ">",
-      warning = " ",
-      error = " ",
+      diag = "▫",
       info = "󰌶 ",
     },
     kind_icons = {
@@ -175,6 +173,62 @@ end
 
 -- highlighting -----------------------------
 tools.hl_str = function(hl, str) return "%#" .. hl .. "#" .. str .. "%*" end
+
+tools.get_hl_hex = function(hl_group)
+  assert(hl_group, "Error: Must have hl group name")
+
+  local hl = vim.api.nvim_get_hl(0, { name = hl_group })
+
+  return {
+    fg = hl.fg and ("#%06x"):format(hl.fg) or nil,
+    bg = hl.bg and ("#%06x"):format(hl.bg) or nil,
+  }
+end
+
+local statusline_hls = {}
+
+function tools.get_or_create_hl(hl_fg, hl_bg)
+  hl_bg = hl_bg or "Normal"
+  local sanitized_hl_fg = hl_fg:gsub("#", "")
+  local sanitized_hl_bg = hl_bg:gsub("#", "")
+  local hl_name = "SL" .. sanitized_hl_fg .. sanitized_hl_bg
+
+  if not statusline_hls[hl_name] then
+    -- If not in the cache, create the highlight group
+    local bg_hl
+    if hl_bg:match("^#") then
+      -- If hl_bg starts with #, it's a hex color
+      bg_hl = { bg = hl_bg }
+    else
+      -- Otherwise treat it as highlight group name
+      bg_hl = vim.api.nvim_get_hl(0, { name = hl_bg })
+    end
+
+    local fg_hl
+    if hl_fg:match("^#") then
+      -- If hl_fg starts with #, it's a hex color
+      fg_hl = { fg = hl_fg }
+    else
+      -- Otherwise treat it as highlight group name
+      fg_hl = vim.api.nvim_get_hl(0, { name = hl_fg })
+    end
+
+    if not bg_hl.bg then
+      bg_hl = vim.api.nvim_get_hl(0, { name = "Statusline" })
+    end
+    if not fg_hl.fg then
+      fg_hl = vim.api.nvim_get_hl(0, { name = "Statusline" })
+    end
+
+    vim.api.nvim_set_hl(0, hl_name, {
+      bg = bg_hl.bg and (type(bg_hl.bg) == "string" and bg_hl.bg or ("#%06x"):format(bg_hl.bg)) or "none",
+      fg = fg_hl.fg and (type(fg_hl.fg) == "string" and fg_hl.fg or ("#%06x"):format(fg_hl.fg)) or "none",
+    })
+    statusline_hls[hl_name] = true
+  end
+
+  return "%#" .. hl_name .. "#"
+end
 
 -- insert grouping separators in numbers
 tools.group_number = function(num, sep)

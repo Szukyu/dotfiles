@@ -8,13 +8,12 @@ local mini_icons = require("mini.icons")
 
 local HL = {
   branch = { "DiagnosticOk", icons.branch },
-  file = { "NonText", icons.node },
   fileinfo = { "Function", icons.document },
   nomodifiable = { "DiagnosticWarn", icons.bullet },
   modified = { "DiagnosticError", icons.bullet },
   readonly = { "DiagnosticWarn", icons.lock },
-  error = { "DiagnosticError", icons.error },
-  warn = { "DiagnosticWarn", icons.warning },
+  error = { "DiagnosticError", icons.diag },
+  warn = { "DiagnosticWarn", icons.diag },
   visual = { "DiagnosticInfo", "‹› " },
 }
 
@@ -30,17 +29,15 @@ local ORDER = {
   "mod",
   "ro",
   "sep",
-  "diag",
   "fileinfo",
-  "pad",
+  "filetype",
   "scrollbar",
-  "pad",
+  "diag",
 }
 
 local PAD = " "
 local SEP = "%="
-local SBAR =
-  { "▔", "🮂", "🬂", "🮃", "▀", "▄", "▃", "🬭", "▂", "▁" }
+local SBAR = { "󰋙", "󰫃", "󰫄", "󰫅", "󰫆", "󰫇", "󰫈" }
 
 -- utilities -----------------------------------------
 local function concat(parts)
@@ -67,9 +64,9 @@ local function path_widget(root, fname)
   icon, hl = mini_icons.get("file", file_name)
 
   if fname == "" then file_name = "[No Name]" end
-  path = tools.hl_str(hl, icon) .. file_name
+  path = " " .. tools.hl_str(hl, icon) .. " " .. file_name
 
-  if bo.buftype == "help" then return ICON.file .. path end
+  if bo.buftype == "help" then return path end
 
   local dir_path = fn.fnamemodify(fname, ":h") .. "/"
   if dir_path == "./" then dir_path = "" end
@@ -87,7 +84,7 @@ local function path_widget(root, fname)
   if win_w < need + 5 then dir_path = "" end
   if win_w < need - #dir_path then repo_info = "" end
 
-  return repo_info .. ICON.file .. " " .. dir_path .. path .. " "
+  return repo_info .. " " .. dir_path .. path .. " "
 end
 
 -- diagnostics ---------------------------------------------
@@ -99,7 +96,7 @@ local function diagnostics_widget()
     string.format("%-3d", diag_count[2] or 0)
 
   return string.format(
-    "%s %s  %s %s  ",
+    "%s %s%s %s ",
     ICON.error,
     tools.hl_str("DiagnosticError", err),
     ICON.warn,
@@ -157,10 +154,12 @@ end
 
 -- scrollbar ---------------------------------------------
 local function scrollbar_widget()
-  local cur = api.nvim_win_get_cursor(0)[1]
-  local total = api.nvim_buf_line_count(0)
+  local cur = vim.api.nvim_win_get_cursor(0)[1] local total = vim.api.nvim_buf_line_count(0)
+
   local idx = math.floor((cur - 1) / total * #SBAR) + 1
-  return tools.hl_str("Substitute", SBAR[idx]:rep(2))
+  local sbar = SBAR[idx]
+
+  return tools.hl_str("DiagnosticInfo", " " .. sbar .. "  ")
 end
 
 -- render ---------------------------------------------
@@ -180,6 +179,7 @@ function M.render()
       or ICON.nomodifiable,
     ro = get_opt("readonly", { buf = buf }) and ICON.readonly or "",
     sep = SEP,
+    filetype = vim.bo.filetype:upper(),
     diag = diagnostics_widget(),
     fileinfo = fileinfo_widget(),
     scrollbar = scrollbar_widget(),

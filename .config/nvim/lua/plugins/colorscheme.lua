@@ -26,6 +26,7 @@ return {
         bg = "#080A18",
         fg = "#27A1b9",
       }
+      highlights.SnippetTabstop = { link = "NONE" }
     end,
   },
   config = function(_, opts)
