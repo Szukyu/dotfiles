@@ -1,5 +1,8 @@
 return {
   "akinsho/bufferline.nvim",
+  dependencies = {
+    "echasnovski/mini.icons",
+  },
   config = function()
     local bufferline = require('bufferline')
 
