@@ -3,7 +3,10 @@ return {
   lazy = false,
   version = "v0.*",
   dependencies = {
-    'rafamadriz/friendly-snippets',
+    {
+      "L3MON4D3/LuaSnip",
+      dependencies = "rafamadriz/friendly-snippets",
+    }
   },
 
   opts = {

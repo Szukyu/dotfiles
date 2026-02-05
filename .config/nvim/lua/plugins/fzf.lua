@@ -10,6 +10,7 @@ return {
         ["gutter"] = "-1",
       }
     })
+
     local keymap = vim.keymap
     keymap.set("n", "<leader>f", require('fzf-lua').files, { desc = "FZF Files" })
     keymap.set("n", "<leader>g", require('fzf-lua').live_grep, { desc = "FZF Grep" })
