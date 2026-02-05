@@ -8,6 +8,9 @@ return {
         ["vim.lsp.util.stylize_markdown"] = true,
         ["cmp.entry.get_documentation"] = true,
       },
+      signature = {
+        enabled = false,
+      }
     },
     routes = {
       {
@@ -23,8 +26,6 @@ return {
       },
     },
     presets = {
-      bottom_search = true,
-      command_palette = true,
       long_message_to_split = true,
     },
   },

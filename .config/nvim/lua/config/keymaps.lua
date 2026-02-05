@@ -37,7 +37,6 @@ map("n", "<leader>sg", function() Snacks.picker.grep() end, { desc = "Grep" })
 map({ "n", "x" }, "<leader>sw", function() Snacks.picker.grep_word() end, { desc = "Visual selection or word" })
 
 -- Search
-map("n", "<leader>s", function() Snacks.picker.registers() end, { desc = "Registers" })
 map("n", "<leader>sa", function() Snacks.picker.autocmds() end, { desc = "Autocmds" })
 map("n", "<leader>sc", function() Snacks.picker.command_history() end, { desc = "Command History" })
 map("n", "<leader>sC", function() Snacks.picker.commands() end, { desc = "Commands" })
@@ -52,6 +51,9 @@ map("n", "<leader>sm", function() Snacks.picker.marks() end, { desc = "Marks" })
 map("n", "<leader>sR", function() Snacks.picker.resume() end, { desc = "Resume" })
 map("n", "<leader>sq", function() Snacks.picker.qflist() end, { desc = "Quickfix List" })
 map("n", "<leader>qp", function() Snacks.picker.projects() end, { desc = "Projects" })
+
+-- Explorer
+map("n", "<leader>fe", function () Snacks.picker.explorer() end, { desc = "Explorer" })
 
 -- Lsp
 map("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Goto Definition" })

@@ -78,7 +78,7 @@ update() {
 }
 
 clean() {
-  echo "[Deleting] Nvim Cache"
+  echo "[Deleting] Nvim Cache + Local"
   rm -rf ~/.cache/nvim/
   rm -rf ~/.local/share/nvim/
   rm -rf ~/.local/state/nvim/

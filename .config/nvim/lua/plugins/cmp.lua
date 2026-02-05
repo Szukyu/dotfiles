@@ -14,7 +14,6 @@ return {
       preset = 'super-tab',
     },
     appearance = {
-      use_nvim_cmp_as_default = true,
       nerd_font_variant = "mono",
       kind_icons = {
         Text = "",
@@ -115,7 +114,7 @@ return {
       documentation = {
         auto_show = true,
         auto_show_delay_ms = 250,
-        treesitter_highlighting = false,
+        treesitter_highlighting = true,
         window = {
           border = "rounded",
           scrollbar = false,
@@ -126,7 +125,6 @@ return {
       enabled = true,
       window = {
         border = "rounded",
-        direction_priority = { 's', 'n' },
       },
     }
   },
