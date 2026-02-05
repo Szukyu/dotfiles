@@ -1,3 +1,9 @@
+vim.api.nvim_create_user_command("StatusMoreInfo", function()
+  _G.show_more_info = not _G.show_more_info
+  -- vim.g.show_more_info = not vim.g.show_more_info
+  vim.cmd("redrawstatus!")
+end, {})
+
 vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
   callback = function()
     if vim.o.buftype ~= "nofile" then

@@ -19,7 +19,8 @@ palette = 15=#c8d3f5
 font-size = 14
 font-feature = -liga
 
-background = #080A18
+background = #000000 
+# --080A18
 foreground = #c0caf5
 selection-background = #283457
 selection-foreground = #c0caf5

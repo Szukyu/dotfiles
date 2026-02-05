@@ -7,7 +7,7 @@ return {
     lualine_bold = true,
     -- transparent = true,
     on_colors = function(colors)
-      colors.bg = "#080A18"
+      colors.bg = "#000000" --"#080A18"
       colors.bg_float = "#04050B"
       colors.bg_sidebar = "#03040A"
       colors.bg_statusline = "NONE" --"#080A18"
