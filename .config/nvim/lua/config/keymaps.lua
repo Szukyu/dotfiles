@@ -9,9 +9,6 @@ map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = tru
 -- Lazy
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
--- Oil
-map("n", "<leader>e", "<cmd>Oil --float<cr>", { desc = "Open Oil"})
-
 -- Lazygit
 map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 map("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
@@ -53,7 +50,7 @@ map("n", "<leader>sq", function() Snacks.picker.qflist() end, { desc = "Quickfix
 map("n", "<leader>qp", function() Snacks.picker.projects() end, { desc = "Projects" })
 
 -- Explorer
-map("n", "<leader>fe", function () Snacks.picker.explorer() end, { desc = "Explorer" })
+map("n", "<leader>e", function () Snacks.picker.explorer() end, { desc = "Explorer" })
 
 -- Lsp
 map("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Goto Definition" })

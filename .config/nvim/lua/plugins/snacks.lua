@@ -22,6 +22,12 @@ return {
       },
     },
     picker = {
+      sources = {
+        explorer = {
+          auto_close = true,
+          hidden = true,
+        }
+      },
       layouts = {
         default = {
           reverse = true,
