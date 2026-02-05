@@ -9,6 +9,7 @@ return {
       options = {
         icons_enabled = true,
         globalstatus = 3,
+        disabled_filetypes = { statusline = { "snacks_dashboard" } },
       },
       sections = {
         lualine_a = { "mode" },

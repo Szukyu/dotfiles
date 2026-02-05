@@ -76,3 +76,10 @@ update() {
   # brew cleanup -s
   # brew bundle dump --describe --force 
 }
+
+clean() {
+  echo "[Deleting] Nvim Cache"
+  rm -rf ~/.cache/nvim/
+  rm -rf ~/.local/share/nvim/
+  rm -rf ~/.local/state/nvim/
+}

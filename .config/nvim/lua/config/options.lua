@@ -1,19 +1,27 @@
 -- Leader
 vim.g.mapleader = " "
 
--- Tabs
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.swapfile = false
+local opt = vim.opt
 
--- Terminal GUI Color
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
-vim.opt.signcolumn = "yes"
-
--- Copy to System Clipboard
-vim.cmd("set clipboard+=unnamedplus")
+opt.clipboard = "unnamedplus"
+opt.completeopt = "menu,menuone,noselect"
+opt.confirm = true
+opt.expandtab = true
+opt.fillchars = {
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
+}
+opt.ignorecase = true
+opt.shiftround = true
+opt.shiftwidth = 2
+opt.showmode = false
+opt.signcolumn = "yes"
+opt.tabstop = 2
+opt.termguicolors = true
 
 -- Keymaps Silent By Default
 local keymap_set = vim.keymap.set
@@ -23,44 +31,5 @@ vim.keymap.set = function(mode, lhs, rhs, opts)
   return keymap_set(mode, lhs, rhs, opts)
 end
 
--- FZF
-vim.env.FZF_DEFAULT_OPTS = ""
-
--- Completion
-vim.opt.completeopt = "menuone,noselect"
-
-vim.opt.conceallevel = 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Fix markdown indentation settings
+vim.g.markdown_recommended_style = 0

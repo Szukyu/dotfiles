@@ -30,14 +30,10 @@ return {
       timeout = 3000,
     },
     quickfile = { enabled = true },
-    statuscolumn = { enabled = true },
+    statuscolumn = { enabled = false },
     words = { enabled = true },
-    input = {
-      enabled = true,
-    },
-    indent = {
-      enabled = true
-    },
+    input = { enabled = true },
+    indent = { enabled = true },
   },
   keys = {
     { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
