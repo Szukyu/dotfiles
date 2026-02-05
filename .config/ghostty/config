@@ -24,12 +24,6 @@ selection-foreground = #c0caf5
 
 cursor-invert-fg-bg = true
 window-theme = ghostty
-
-# Font
-font-family = "CaskaydiaCove Nerd Font Mono"
-font-family-bold = "CaskaydiaCove Nerd Font Mono"
-font-family-italic = "Fira Code"
-font-family-bold-italic = "Fira Code"
 adjust-underline-position = 4
 
 # Mouse
