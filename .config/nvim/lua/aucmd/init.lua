@@ -47,8 +47,8 @@ aucmd("BufEnter", {
 aucmd("BufNewFile", {
   group = grp,
   command = "silent! 0r "
-    .. vim.fn.stdpath("config")
-    .. "/templates/skeleton.%:e",
+  .. vim.fn.stdpath("config")
+  .. "/templates/skeleton.%:e",
   desc = "If one exists, use a template when opening a new file",
 })
 
@@ -74,7 +74,7 @@ aucmd("LspAttach", {
   end,
 })
 
----- during editing
+---- During editing
 grp = augrp("Editing", { clear = true })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorMoved", "CursorHoldI" }, {
