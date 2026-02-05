@@ -52,9 +52,11 @@ fi
 # Starship
 eval "$(starship init zsh)"
 
-# Alias
+# Eza
 alias ls="eza --color=always --icons --group-directories-first"
 alias ll="eza --color=always --icons --group-directories-first --all --long"
+
+# Alias
 alias mkdir="mkdir -vp"
 alias mv="mv -iv"
 alias cp="cp -riv"
