@@ -8,6 +8,7 @@ return {
     lualine.setup({
       options = {
         icons_enabled = true,
+        globalstatus = 3,
       },
       sections = {
         lualine_a = { "mode" },
@@ -15,7 +16,7 @@ return {
         lualine_c = {
           { "diagnostics", icons_enabled = true, colored = true },
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0} },
-          { "filename", path = 1}
+          { "filename", path = 1, padding = { left = 0, right = 0} }
         },
         lualine_x = {
           {
@@ -38,6 +39,7 @@ return {
           },
         },
       },
+      extensions = { 'oil', 'lazy', 'fzf' },
     })
   end,
 }
