@@ -105,3 +105,7 @@ run = 'move-node-to-workspace 5'
 [[on-window-detected]]
 if.app-id = 'com.slackow.SlackowWall'
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'org.prismlauncher.PrismLauncher'
+run = "layout floating"
