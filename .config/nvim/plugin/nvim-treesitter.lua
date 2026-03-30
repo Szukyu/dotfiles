@@ -1,7 +1,6 @@
 vim.pack.add({ 'https://github.com/nvim-treesitter/nvim-treesitter' })
 
-require("nvim-treesitter.install").update("all")
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
   ensure_installed = {
     "bash",
     "c",
@@ -21,8 +20,6 @@ require("nvim-treesitter.configs").setup({
     "typescript",
     "vim"
   },
-  indent = { enable = true },
-  highlight = { enable = true },
 })
 
 vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)

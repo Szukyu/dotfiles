@@ -28,5 +28,4 @@ require("tokyonight").setup({
   end,
 })
 
--- Load the colorscheme
 vim.cmd.colorscheme("tokyonight")

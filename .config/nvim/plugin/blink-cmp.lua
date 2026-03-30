@@ -2,6 +2,9 @@ vim.pack.add({ 'https://github.com/saghen/blink.cmp' })
 
 require("blink.cmp").setup({
   completion = {
+    menu = {
+      scrollbar = false
+    },
     documentation = {
       auto_show = true,
     },
