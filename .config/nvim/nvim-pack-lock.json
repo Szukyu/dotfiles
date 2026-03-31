@@ -1,8 +1,12 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "8a2060dff4e68ac17f1c92aed526c76fb0c1ac2f",
+      "rev": "390d84be50cc0ae6d13f395af74bf75c2465400f",
       "src": "https://github.com/saghen/blink.cmp"
+    },
+    "fzf-lua": {
+      "rev": "c9e7b7bfbd01f949164988ee1684035468e1995c",
+      "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
       "rev": "50c205548d8b037b7ff6378fca6d21146f0b6161",
@@ -16,6 +20,10 @@
       "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
       "src": "https://github.com/mason-org/mason.nvim.git"
     },
+    "mini.files": {
+      "rev": "b4796e09eb103f9f2d1e00aa2dab3753b879b17b",
+      "src": "https://github.com/nvim-mini/mini.files"
+    },
     "nvim-lspconfig": {
       "rev": "16812abf0e8d8175155f26143a8504e8253e92b0",
       "src": "https://github.com/neovim/nvim-lspconfig"
@@ -27,10 +35,6 @@
     "nvim-web-devicons": {
       "rev": "d7462543c9e366c0d196c7f67a945eaaf5d99414",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
-    },
-    "snacks.nvim": {
-      "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
-      "src": "https://github.com/folke/snacks.nvim"
     },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
