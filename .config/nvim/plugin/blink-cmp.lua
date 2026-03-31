@@ -2,8 +2,21 @@ vim.pack.add({ 'https://github.com/saghen/blink.cmp' })
 
 require("blink.cmp").setup({
   completion = {
+    list = {
+      selection = {
+        preselect = true,
+        auto_insert = true,
+      }
+    },
     menu = {
-      scrollbar = false
+      scrollbar = false,
+      draw = {
+        gap = 2,
+        columns = {
+          { 'kind_icon', 'kind', gap = 1 },
+          { 'label', 'label_description', gap = 1 },
+        },
+      },
     },
     documentation = {
       auto_show = true,
