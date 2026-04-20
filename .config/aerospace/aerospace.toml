@@ -75,7 +75,7 @@ run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 4'
+run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -108,4 +108,8 @@ run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = 'org.prismlauncher.PrismLauncher'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steamhelper'
 run = "layout floating"
