@@ -50,3 +50,4 @@ keybind = super+shift+r=reload_config
 clipboard-read = allow
 clipboard-write = allow
 shell-integration = zsh
+shell-integration-features = ssh-env
