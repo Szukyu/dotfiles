@@ -44,6 +44,8 @@ zstyle ':fzf-tab:*' fzf-flags --color=gutter:-1,bg+:#170B3B
 # Keybinds
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 # HomeBrew
 if [[ -f "/opt/homebrew/bin/brew" ]] then
