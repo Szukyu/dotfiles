@@ -21,7 +21,7 @@ font-feature = -liga
 
 background = #000000 
 # --080A18
-background-opacity = 0.8
+# background-opacity = 0.8
 foreground = #c0caf5
 selection-background = #283457
 selection-foreground = #c0caf5

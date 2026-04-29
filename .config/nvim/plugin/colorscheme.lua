@@ -3,7 +3,7 @@ vim.pack.add({ 'https://github.com/folke/tokyonight.nvim' })
 require("tokyonight").setup({
   style = "moon",
   lualine_bold = true,
-  transparent = true,
+  transparent = false,
   on_colors = function(colors)
     colors.bg = "#000000"
     colors.bg_float = "#04050B"

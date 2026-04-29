@@ -1,3 +1,4 @@
+vim.pack.add({ 'https://github.com/saghen/blink.lib' })
 vim.pack.add({ 'https://github.com/saghen/blink.cmp' })
 
 require("blink.cmp").setup({
@@ -47,5 +48,8 @@ require("blink.cmp").setup({
 
   fuzzy = {
     implementation = "lua",
-  }
+  },
+	cmdline = {
+		enabled = false,
+	}
 })

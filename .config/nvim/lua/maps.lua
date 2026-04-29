@@ -8,9 +8,15 @@ map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = tru
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up" })
 
+-- Lazygit
+map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
+map("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
+map("n", "<leader>gl", function() Snacks.lazygit.log() end, { desc = "Lazygit Log" })
+
+-- Picker
 map("n", "<leader>e", function() MiniFiles.open() end, { desc = "Find Files" })
-map("n", "<leader><space>", function() require('fzf-lua').files() end, { desc = "Fzf Files" })
-map("n", "<leader>/", function() require('fzf-lua').live_grep() end, { desc = "Fzf Files" })
+map("n", "<leader>/", function() Snacks.picker.grep() end, { desc = "Grep" })
+map("n", "<leader><space>", function() Snacks.picker.files() end, { desc = "Find Files" })
 
 -- Windows
 map("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })

@@ -1,4 +1,8 @@
-vim.pack.add({ 'https://github.com/nvim-mini/mini.files' })
+vim.pack.add({ 'https://github.com/nvim-tree/nvim-web-devicons' })
+vim.pack.add({ "https://github.com/nvim-mini/mini.nvim" })
+require("mini.surround").setup({})
+require("mini.pairs").setup({})
+require("mini.notify").setup({})
 
 local minifiles = require('mini.files')
 minifiles.setup({
