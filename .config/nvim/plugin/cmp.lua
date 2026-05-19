@@ -49,7 +49,4 @@ require("blink.cmp").setup({
   fuzzy = {
     implementation = "lua",
   },
-	cmdline = {
-		enabled = false,
-	}
 })
