@@ -26,17 +26,6 @@ local languages = {
 	"yaml",
 }
 
-vim.api.nvim_create_autocmd("FileType", {
-	callback = function(args)
-		local filetype = args.match
-		local lang = vim.treesitter.language.get_lang(filetype)
-		if vim.treesitter.language.add(lang) then
-			vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-			vim.treesitter.start()
-		end
-	end,
-})
-
 vim.api.nvim_create_autocmd("PackChanged", {
 	callback = function(ev)
 		local name, kind = ev.data.spec.name, ev.data.kind

@@ -54,6 +54,9 @@ vim.lsp.enable({
 	"lua_ls",
 	"tailwindcss",
 	"ts_ls",
+	"clangd",
+	"css-lsp",
+	"html-lsp"
 })
 
 require("vim._core.ui2").enable({})
