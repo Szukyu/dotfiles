@@ -14,15 +14,15 @@ require("tokyonight").setup({
   on_highlights = function(highlights, _)
     highlights.BlinkCmpMenuBorder = {
       bg = "#080A18",
-      fg = "#27A1b9",
+      fg = "#27A1B9",
     }
     highlights.BlinkCmpDoc = {
       bg = "#04050B",
-      fg = "#c0caf5",
+      fg = "#C0CAf5",
     }
     highlights.BlinkCmpDocBorder = {
       bg = "#080A18",
-      fg = "#27A1b9",
+      fg = "#27A1B9",
     }
     highlights.SnippetTabstop = { link = "NONE" }
   end,
