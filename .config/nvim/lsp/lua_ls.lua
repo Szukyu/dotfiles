@@ -21,6 +21,9 @@ return {
 					vim.env.VIMRUNTIME,
 				},
 			},
+			diagnostics = {
+				globals = { "Snacks" },
+			}
 		},
 	},
 }
