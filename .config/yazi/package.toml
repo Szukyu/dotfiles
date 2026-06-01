@@ -1,0 +1,34 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "598cdb6"
+hash = "7b625412411be411153886894d9acaf"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "598cdb6"
+hash = "88e56a64b7ce7c4314427452343fef17"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "a837101"
+hash = "635b0feb9215772d22020eb0abf0bb34"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "598cdb6"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:diff"
+rev = "598cdb6"
+hash = "8b1af6b5a69797ee951f2a80ce570818"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:zoom"
+rev = "598cdb6"
+hash = "fa268cb59989a87780605fdcfb8d99a9"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-macchiato"
+rev = "0f9204b"
+hash = "67f2240fd9c98f21714527a24cd672f8"
